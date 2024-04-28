@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>REX - Virtual Assistant</title>
+    <link rel="shortcut icon" href="avatar.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+width: 100vw;
+height: 100vh;
+font-family: sans-serif;
+padding: 10em 10em;
+background-color: #0A2344;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.glass {
+width: 500px;
+height: 400px;
+background-color: rgba(255, 255, 255, 0.1);
+padding: 50px;
+color: #000;
+border-radius: 9px;
+backdrop-filter: blur(50px);
+border: 2px solid transparent;
+background-clip: padding-box;
+box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.3);
+line-height: 1.5;
+transform: translatey(-5%);
+transition: transform 0.5s;
+}
+.glass-1 {
+width: 500px;
+height: 400px;
+background-color: rgba(255, 255, 255, 0.1);
+padding: 50px;
+color: rgb(122, 82, 82);
+border-radius: 9px;
+backdrop-filter: blur(50px);
+border: 2px solid transparent;
+background-clip: padding-box;
+box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.3);
+line-height: 1.5;
+transform: translatey(-5%);
+transition: transform 0.5s;
+font-size: 1.7rem;
+}
+.glass h1 {
+font-size: 1.5rem;
+text-align: center;
+}
+.glass h2 {
+font-size: 1rem;
+margin-top: 20px;
+}
+.input {
+width: 100%;
+height: 70px;
+overflow: hidden;
+margin-top: 40px;
+}
+.input input {
+width: 100%;
+height: 70px;
+border: none;
+padding-left: 30px;
+padding-top: 0;
+outline: none;
+font-size: 1.5rem;
+border-radius: 20px;
+}
+.glass p {
+font-size: 1.6rem;
+margin-top: 30px;
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+.main {
+    min-height: 99vh;
+    position: relative;
+    width: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .image-container {
+    padding: 10px;
+}
+.main .image-container .image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .image-container .image img {
+    width: 350px;
+    align-items: center;
+}
+
+.main .image-container h1 {
+    color: #00bcd4;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.main .image-container p {
+    color: #324042;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 50px;
+    border-radius: 20px;
+    background: rgb(202 253 255 / 50%);
+}
+
+.main .input .talk {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.main .input .talk i {
+    font-size: 20px;
+    color: #aed0d0;
+}
+
+.main .input .content {
+    color: #aed0d0;
+    font-size: 15px;
+    margin-right: 20px;
+}
+.image {
+  animation: example 5s linear 2s infinite alternate;
+}
+  </style>
+</head>
+ <body>
+  <div class="glass"> <h1>Rex Chatbot</h1> <h2>Lets have Some Interaction</h2> <div class="input"> <input type="text" id="userBox" onkeydown="if(event.keyCode == 13){ talk()}" placeholder="Type your Question" /> </div> <p id="chatLog">Answer Appering Hear</p> </div>
+
+
+
+
+
+  <section class="main">
+    <div class="image-container">
+        <div class="image">
+            <img src="images/art.png" style="width: 50px; height: auto; object-fit: contain;" alt="image">
+        </div>
+        <h1>REX</h1>
+        <p>I m a Virtual Assistant REX, How may i help you?</p>
+    </div>
+    
+    <div class="input">
+        <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+        <h1 class="content"> Click here to speak</h1>
+    </div>
+</section>
+<script src="script.js"></script>
+
+
+
+  <script>
+function talk(){
+var know = {
+"Who are you" : "Hello, I'm Rex. Am here to provide any basic information you'd like to know about Artemis Hi-Tech Company.",
+"How are you" : "Good :)",
+"Tell me more about you" : "We're the ARTEMIS HI-TECH COMPANY that deals in solving cybercrimes, software development, and many more IT related problems...is there anyway i can help you?...",
+"ok" : "Thank You So Much ",
+"Bye" : "Okay! Will meet soon..",
+"Who is the owner of this company" : "This company is owned by Mr. Walter Nyaika, regardless, the CEO is Mr. Rugumayo Alex "
+};
+var user = document.getElementById('userBox').value;
+document.getElementById('chatLog').innerHTML = user + "<br>";
+if (user in know) {
+document.getElementById('chatLog').innerHTML = know[user] + "<br>";
+}else{
+document.getElementById('chatLog').innerHTML = "Sorry,I didn't understand that<br>";
+}
+}
+
+
+//speech chatbot
+
+
+const btn = document.querySelector('.talk');
+const content = document.querySelector('.content');
+function speak(text) {
+  const text_speak = new SpeechSynthesisUtterance(text);
+
+  text_speak.rate = 1;
+  text_speak.volume = 1;
+  text_speak.pitch = 1;
+
+  window.speechSynthesis.speak(text_speak);
+}
+function wishMe() {
+  var day = new Date();
+  var hour = day.getHours();
+
+  if (hour >= 0 && hour < 12) {
+      speak("Good Morning Boss...");
+  } else if (hour >= 12 && hour < 17) {
+      speak("Good Afternoon Boss...");
+  } else {
+      speak("Good Evening Boss...");
+  }
+}
+
+window.addEventListener('load', () => {
+  speak("Initializing Rex...");
+  wishMe();
+});
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+
+recognition.onresult = (event) => {
+    const currentIndex = event.resultIndex;
+    const transcript = event.results[currentIndex][0].transcript;
+    content.textContent = transcript;
+    takeCommand(transcript.toLowerCase());
+};
+
+btn.addEventListener('click', () => {
+    content.textContent = "Listening...";
+    recognition.start();
+});
+
+function takeCommand(message) {
+    if (message.includes('hey') || message.includes('hello')) {
+        speak("Hello Mr. Walter, How May I Help You?");
+    }else if (message.includes('tell me about the company') || message.includes('what do you do')) {
+        speak("We're the artemis hi-tech company that deals in software engineering, cybersecurity, IT-realted projects, website development and other more IT-problems....is there anyway ica n help you?");
+    } else if (message.includes("open google")) {
+        window.open("https://google.com", "_blank");
+        speak("Opening Google...");
+    } else if (message.includes("open youtube")) {
+        window.open("https://youtube.com", "_blank");
+        speak("Opening Youtube...");
+    } else if (message.includes("open facebook")) {
+        window.open("https://facebook.com", "_blank");
+        speak("Opening Facebook...");
+    } else if (message.includes('what is') || message.includes('who is') || message.includes('what are')) {
+        window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
+        const finalText = "This is what I found on the internet regarding " + message;
+        speak(finalText);
+    } else if (message.includes('wikipedia')) {
+        window.open(`https://en.wikipedia.org/wiki/${message.replace("wikipedia", "").trim()}`, "_blank");
+        const finalText = "This is what I found on Wikipedia regarding " + message;
+        speak(finalText);
+    } else if (message.includes('time')) {
+        const time = new Date().toLocaleString(undefined, { hour: "numeric", minute: "numeric" });
+        const finalText = "The current time is " + time;
+        speak(finalText);
+    } else if (message.includes('date')) {
+        const date = new Date().toLocaleString(undefined, { month: "short", day: "numeric" });
+        const finalText = "Today's date is " + date;
+        speak(finalText);
+    } else if (message.includes('calculator')) {
+        window.open('Calculator:///');
+        const finalText = "Opening Calculator";
+        speak(finalText);
+    } else {
+        window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
+        const finalText = "I found some information for " + message + " on Google";
+        speak(finalText);
+    }
+}
+
+
+
+  </script>
+ </body>
+</html>

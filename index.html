@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/art.png">
+    <title>Artimis Hi-Tech Company</title>
+    <style>
+        .inup {
+            position: relative;
+            display: inline-flex;
+            float: right;
+            border-radius: 20px;
+            color: white;
+            padding: 1px;
+        }
+
+        .info, .use, .help {
+         float: left;
+          text-align: left;
+          display: block;  
+          margin: auto;
+          width: 30%;
+          list-style-type: none;
+          text-decoration: none;
+        }
+
+       
+    </style>
+</head>
+
+<header>
+    <img src="images/art.png" alt="logo" style="width: 10%; height: auto; object-fit: contain;">
+   
+    <h1>ARTEMIS HI-TECH COMPANY</h1>
+<br>
+
+</header>
+<!-- Nav Bar -->
+<body>
+
+   
+    <div class="navbar">
+        <!--side vav-->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Terms of Use</a>
+        <a href="Chatbot.html">Chatbot</a>
+        <a href="#">Cookie Use Notice</a>
+        <a href="https://www.pdpo.go.ug">Personal Data Protection Office</a>
+        <a href="https://gou.go.ug">GOU.GO.UG</a>
+        <a href="https://ict.go.ug">Ministry of ICT Uganda</a>
+        <a href="#">Donate</a>
+      </div>
+
+      <i class="fab fa-sistrix"></i>
+      
+      <div id="main">
+        <button style="float: left;" class="openbtn" onclick="openNav()">&#9776; </button>
+      </div>
+       
+        <a href="index.html"><i class="fa fa-home"> Home</i></a>
+        <a href="about.html"><i class="fas fa-clock" ></i>About Us</a>
+
+        <div class="subnav">
+            <button class="subnavbtn" onclick="myFunction()">Services <i class="fa fa-angle-down"></i></button>
+            <div class="subnav-content">
+                <a href="online courses.html">Online Courses</a>
+                <a href="internships.html">Internship</a>
+            </div>
+        </div>
+        <a href="myself.html"><i class="fa fa-address-card-o"> Portfolio</i></a>
+    
+        
+        <a href="contact.html"><i class="fa fa-address-book-o"></i> Contact Us</a>
+    </div>
+    <br>
+
+    <button style="float: left;" onclick="myFunction()">Theme</button>
+
+<br><br><br>
+<!--popup forms -->
+<div class="inup">
+    <button class="open-button" onclick="openForm()">Login</button>
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <div class="row">
+                <h2 style="text-align: center;">Login with social media or Manually</h2>
+                <div class="vl">
+                    <span class="vl-innertext">or</span>
+                </div>
+
+                <div class="col">
+                    <a style="text-decoration: none; list-style-type:none; " href="#" class="fb btn">
+                        <i class="fa fa-facebook fa-fw"></i> Login with facebook
+                    </a>
+                    <br>
+                    <a style="text-decoration: none; list-style-type:none; margin-top: 15px;" href="#" class="twitter btn">
+                        <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                    </a>
+                   <a style="text-decoration: none; list-style-type:none;" none href="#" class="google btn">
+                        <i class="fa fa-google-plus"></i> Login with Google+
+                    </a>
+                </div>
+
+                <div class="col">
+                    <div class="hide-md-lg">
+                        <p>Or sign in manually:</p>
+                    </div>
+
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" value="fakepsw" id="myInput" placeholder="Enter password">
+                </div>
+
+            </div>
+
+    <div class="bottom-container">
+        <div class="row">
+            <div class="col">
+                <a href="register.html" style="color: white;" class="btn">Sign up</a>
+            </div>
+        
+                <div class="col">
+                    <a href="register.html" style="color: white;" class="btn">Forgot password</a>
+                </div>
+                
+        </div>
+    </div>
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn-cancel" onclick="closeForm()" style="background-color: red;">Close</button>
+        </form>
+    </div>
+
+
+    <div class="inup">
+        <button class="open-button" onclick="openRegister()" >Sign Up</button>
+        <div class="form-popup" id="myRegister">
+            <form class="form-container">
+            <h1>Create account</h1>
+            <hr>
+
+
+            <label f><b>First Name</b></label>
+            <input type="text" placeholder="Enter First Name" >
+            <label ><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" id="psw" required>
+            
+            
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="psw" required>
+            <label for="ps-repeat"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm password" name="psw-repeat" id="psw-repeat" required>
+            <hr>
+            <p>BY creating an account you agree to our <a href="#">Terms and Privacy</a></p>
+            <button type="submit" class="registerbtn">Register</button>
+        
+
+        <div class="container signin">
+            <p>Already have an account? <a href="login.html">Sign in</a></p>
+            <p><b>Click<a href="index.html">here</a>to return Home</b></p>
+        </div>
+        <button type="submit" class="btn"><a href="login.html">Login</a></button>
+    <button type="button" class="btn-cancel" onclick="closeRegister()" style="background-color: red;">Cancel</button>
+    
+        </form>
+        </div>
+        
+</div>    
+</div>
+<!--end of popup forms-->
+<br>
+<!--slider-->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/angular.jpg" style="width:100%">
+      <div class="content">Frontend AngularJS Developer</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/ux.jpg" style="width:100%">
+      <div class="content">Learn ho to design User interface and User experience online</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/arrays.jpg" style="width:100%">
+      <div class="content">Master Arrays and problem solving with us</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/grad.jpg" style="width:100%">
+      <div class="content">Graduate with flying colors from the free courses we provide</div>
+    </div>
+
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+  
+
+
+</section>
+<!--end of slider images-->
+
+<br><br><br>
+<!--quick links-->
+<h2><b>Quick Links</b></h2>
+<hr>
+<div class="links-container">
+<div class="links">
+    <a style="text-decoration: none;" href="https://www.coursera.org/articles/free-it-certifications"><i>IT Certification</i></a>
+</div>
+<div class="links">
+    <a style="text-decoration: none;" href="https://pdpo.go.ug"><i>Personal Data protection</i></a>
+</div><div class="links">
+    <a style="text-decoration: none;" href="https://www.besafeonline.ug"><i>Besafeonline</i></a>
+</div>
+<div class="links">
+    <a style="text-decoration: none;" href="https://www.nita.go.ug/ughub"><i>Ughub E-portal</i></a>
+</div>
+</div>
+<br>
+    
+</div>
+<section>
+ <article style="font-size: large;">
+    <h3>Message from the Executive Director</h3>
+    <img src="images/her.jpg" style="border-radius:50% ;width: 30%;">
+    <marquee behavior="alternate" `scrollamount="7"><i><b>As we're looking forward to achieving the best of our efforts
+        let's fight cybercrimes and be alerts to any illegal activities on the internet.
+         <br><br>Remember we work as team so that together as one we acn stand firm and develop our skills.
+    </b></i></marquee>
+ </article>
+</section>
+<section>
+    <h3>News and updates</h3>
+    <hr style="background: yellow; padding: 1px; width: 90%;">
+<marquee width="100%" behavior="scroll" direction="left" scrollamount="9">
+    <img src="images/ai.jpg" style="width: 100%; height:  500px;">
+    <img src="images/dubai.jpg" style="width: 100%; height:  500px; ">
+    <img src="images/web.jpg" style="width: 100%; height:  500px;">
+    <img src="images/c+.jpg" style="width: 100%; height:  500px; ">
+    <img src="images/note.jpg" style="width: 100%; height:  500px; ">
+    <img src="images/upik.jpg" style="width: 100%; height:  500px;">
+    <img src="images/e.jpg" style="width: 100%; height:  500px;">
+    <img src="images/binance.jpg" style="width: 100%; height:  500px;">
+    <img src="images/cell.jpg" style="width: 100%; height: 500px;">
+    <img src="images/graphics..jpg" style="width: 100%; height: 500px;">
+    <img src="images/grad.jpg" style="width: 100%; height: 500px;">
+    <img src="images/arrays.jpg" style="width: 100%; height:  500px; ">
+    <img src="images/net.jpg" style="width: 100%; height:  500px; ">
+    <img src="images/net1.jpg" style="width: 100%; height:  500px; ">
+    <img src="images/api.jpg" style="width: 100%; height:  500px; ">
+</marquee>
+
+</section>
+
+<section class="ski">
+
+<h2 style="font-family:cursive ; color: maroon;">OUR LEVEL OF PROFICIENCY</h2>
+    <p>Web Design and Management</p>
+    <div class="skill-container">
+      <div class="skills html">99%</div>
+    </div>
+    
+    <p>Cybersecurity and Networking</p>
+    <div class="skill-container">
+      <div class="skills css">97%</div>
+    </div>
+    
+    <p>Database Management</p>
+    <div class="skill-container">
+      <div class="skills js">98%</div>
+    </div>
+    
+    <p>App Development</p>
+    <div class="skill-container">
+      <div class="skills php ">89%</div>
+    </div>
+</section>
+<br>
+<section class="rate">
+
+    <span>User Rating</span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <p>4.1 average based on 254 reviews.</p>
+    <hr style="border:3px solid #222">
+    
+    <div class="row">
+      <div class="side">
+        <div>5 star</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-5"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>1500</div>
+      </div>
+      <div class="side">
+        <div>4 star</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-4"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>600</div>
+      </div>
+      <div class="side">
+        <div>3 star</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-3"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>150</div>
+      </div>
+      <div class="side">
+        <div>2 star</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-2"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>60</div>
+      </div>
+      <div class="side">
+        <div>1 star</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-1"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>200</div>
+      </div>
+    </div>
+</section>
+
+<header class="heading">
+  <h1>Our Social Presence</h1>
+</header>
+<main class="counter-container">
+  <div class="social">
+    <div class="social-icon">
+      <i class="fa fa-youtube"></i>
+    </div>
+    <p>Subscribers</p>
+    <h3 class="counter" data-count="21035">0</h3>
+  </div>
+  <div class="social">
+    <div class="social-icon">
+      <i class="fa fa-twitter"></i>
+    </div>
+    <p>Followers</p>
+    <h3 class="counter" data-count="8025">0</h3>
+  </div>
+  <div class="social">
+    <div class="social-icon">
+      <i class="fa fa-pinterest"></i>
+    </div>
+    <p>Friends</p>
+    <h3 class="counter" data-count="8025">0</h3>
+  </div>
+  <div class="social">
+    <div class="social-icon">
+      <i class="fa fa-facebook"></i>
+    </div>
+    <p>Likes</p>
+    <h3 class="counter" data-count="125312">0</h3>
+  </div>
+  <div class="social">
+    <div class="social-icon">
+      <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Connections</p>
+    <h3 class="counter" data-count="625">0</h3>
+  </div>
+</main>
+
+
+<!--footer-->
+<footer>
+<h1>In Partnership</h1>
+<div class="pattern">
+    <br><a href="https://molg.go.ug">
+    <figure class="fig">
+        <img src="images/molg.png" style="width: 100%;">
+        <figcaption>Local Government</figcaption>
+    </figure></a>
+
+    <div class="pattern">
+    <br><a href="https://www.bou.org.ug">
+    <figure class="fig">
+        <img src="images/Bank-of-Uganda-1(1).jpg" style="width: 100%;">
+        <figcaption>Bank of Uganda</figcaption>
+    </figure></a></div>
+    
+    <div class="pattern">
+    <br><a href="https://ura.go.ug">
+    <figure class="fig">
+        <img src="images/f.png" style="width: 100%;">
+        <figcaption>Uganda Revenue Authority</figcaption>
+    </figure></a></div>
+
+    <div class="pattern">
+    <br><a href="https://www.kcca.go.ug">
+    <figure class="fig">
+        <img src="images/e.png" style="width: 100%;">
+        <figcaption>Kampala Capital City Authority</figcaption>
+    </figure></a></div>
+
+    <div class="pattern">
+    <br><a href="https://mmu.ac.ug/">
+    <figure class="fig">
+        <img src="images/d9af86a73a96a7c032cc54d2624aced7.jpg" style="width: 100%;">
+        <figcaption>Mountains of the Moon University</figcaption>
+    </figure class="fig"></a></div>
+
+    <div class="pattern">
+    <br><a href="https://www.aripo.org">
+    <figure class="fig">
+        <img src="images/h.png" style="width: 100%;">
+        <figcaption>ARIPO</figcaption>
+    </figure></a></div>
+
+    <div class="pattern">
+    <br><a href="https://cmauganda.co.ug">
+    <figure class="fig">
+        <img src="images/cma.jpeg" style="width: 100%;">
+        <figcaption>Capital Markets Authority</figcaption>
+    </figure></a></div>
+</div>
+<br><br>
+
+<hr style="background-color: blue; padding: 1px; width: 98%;">
+
+<div class="info">
+    <h2>Contact info</h2>
+    
+    <p><i class="fa fa-home">Artemis -Uganda, Reinah courts, plot A,</i></p>
+    <p><i class="fa fa-fax"></i> P.O.Box 20002, Kampala Uganda</p>
+    <p><i class="fa fa-phone" ></i><a style="text-decoration: none;" href="tel: 0740125805"> (+256)740125805</a></p>
+    <p><i class="fa fa-map" ></i><a style="text-decoration: none;" href="about.html">  Map location</a></p>
+    <p><a href="index.html"> <i class="fa fa-envelope"></i>   info@artemis.co.ug</a></p>
+    <div>
+        <a href="#">
+           <i class="fa fa-facebook"></i>
+        </a>
+        <a href="#">
+           <i class="fa fa-instagram"></i>
+        </a> <a href="#">
+       <i class="fa fa-twitter"></i>
+        </a> <a href="#">
+           <i class="fa fa-pinterest"></i>
+        </a>
+        <a href="#">
+           <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+</div>
+<div class="use">
+    <h2>Useful links</h2>
+    
+    <li><a style="text-decoration: none;" href="https://ict.go.ug">Ministry of ICT Uganda</a>
+    <li><a style="text-decoration: none;" href="https://www.ucc.co.ug">Uganda Communication Commision</a>
+    <li><a style="text-decoration: none;" href="https://www.eposta.ug">Posta Uganda</a>
+    <li><a style="text-decoration: none;" href="https://nita.go.ug/uganda-national-computer-emergency-response-team-coordination-center-certugcc">National Computer Emergency Response Team</a>
+    <li><a style="text-decoration: none;" href="https://www.statehouseinvest.go.ug">Investors Protection</a>
+    <li><a style="text-decoration: none;" href="https://mmu.ac.ug/">Mountains of the moon University</a>
+</div>
+<div class="help">
+<h2>Artemis Service Desk</h2>
+
+<li><a style="text-decoration: none;" href="tel:0782834582"><i class="fa fa-phone"></i> (+256)740125805</a></li>
+<li><a style="text-decoration: none;" href="tel:0774273572"><i class="fa fa-phone"></i> (+256)774273572</a></li>
+<li><a style="text-decoration: none;" href="tel:0774473707"><i class="fa fa-phone"></i> (+256)774473707</a></li>
+<li><a href=mailto:walternyaika82@gmail.com><i class="fa fa-envelope"></i>   servicedesk@artemis.co.ug</a></li>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div>
+   <a href="#top"><img src="images/top.jpg" style="max-width: 50px; position: relative;"></a> 
+    &copy; Artemis Hi-Tech 2024. All Rights Reserved.
+</footer>
+<!--java-script-->
+<script src="script.js"></script>
+</body>
+
+</html>
