@@ -286,19 +286,7 @@ button {
   padding: 20px;
 }
 
-
-
-/*slider*/
-.slideshow-container .content {
-  position: absolute; /* Position the background text */
-  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 100%; /* Full width */
-  padding: 30px; /* Some padding */
-}
-
+* {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
@@ -310,7 +298,6 @@ button {
 /* Hide the images by default */
 .mySlides {
   display: none;
-  width: 100%;
 }
 
 /* Next & previous buttons */
@@ -343,7 +330,7 @@ button {
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 50%;
+  font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -351,7 +338,7 @@ button {
   text-align: center;
 }
 
-/* Number text (1/4 etc) */
+/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -377,6 +364,120 @@ button {
 }
 
 /* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Progress bar */
+.as-wrap .as-progress {
+	position: relative;
+	width: 100%;
+	min-height:5px;
+	margin-top:-5px;
+	background: transparent;
+	overflow: hidden;
+	z-index:2;
+}
+
+.as-wrap .as-progress-value {
+	position: absolute;
+	top:0;
+	left:0;
+	min-height: 5px;
+	min-width: 0;
+	width:0;
+	max-width: 100%;
+	background: lime;
+}
+
+/* Navigation */
+.csstransforms .as-wrap .as-nav a { transition: opacity .4s ease-out; }
+.as-wrap .as-nav a {
+	opacity: 0;
+	position: absolute;
+	top:0;
+	height:100%;
+	width:50px;
+	text-align:center;
+	color:white;
+	z-index:2;
+}
+.as-wrap .as-nav .dir-prev { left:0; }
+.as-wrap .as-nav .dir-next { right:0; }
+.as-wrap .as-nav a:hover { 
+	color:#000;
+	opacity: 1;
+}
+.as-wrap.hovering-marker .as-nav a { opacity: 1; }
+.as-wrap .as-nav a span {
+	position: absolute;
+	top:50%;
+	left:0;
+	margin-top:-40px;
+	display:block;
+	height:80px;
+	width: 50px;
+	background:lime;
+	font-size:2em;
+	line-height: 80px;
+}
+
+/* Marker */
+.as-wrap .as-markers {
+	list-style: none;
+	text-align: center;
+	padding:0; margin:0;
+}
+.as-wrap .as-markers .as-mark {
+	display:inline-block;
+	margin:10px 5px 0 5px;
+}
+.as-wrap .as-markers .as-mark a {
+	display:block;
+	text-decoration: none;
+	color:#ccc;
+}
+.as-wrap .as-markers .as-mark a:hover, 
+.as-wrap .as-markers .as-mark.active a { color:lime; }
+.as-wrap .as-markers .as-mark a span {
+	display:block;
+	width: 10px;
+	height:10px;
+	font-size:40px;
+	line-height: 10px;
+}
+
+/* Caption */
+.as-wrap .as-item .caption {
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width:40%;
+	background: #000;
+	z-index:2;
+	padding:0 20px 0 60px;
+	box-sizing: border-box;
+}
+.rgba .as-wrap .as-item .caption { background:rgba(0,0,0,.5); }
+
+@media (max-width: 767px) {
+	/* Demo style */
+  body {padding:0; margin:0;}
+	.slide_1, .slide_2, .slide_3 {background-size: auto 100%;}
+  .container {width:100%}
+	/* *** */
+	.as-wrap .as-view { height: 250px; }
+	.as-wrap .as-view .as-slider .as-item .caption { width:100%; }
+	.touch .as-wrap .as-nav { display:none;}
+.as-wrap .as-item .caption {padding:1em;}
+}/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -532,24 +633,8 @@ button {
 .social-icon i {
   padding: 0.7rem;
   border-radius: 50%;
-}
+  background-color: darkblue;
 
-.fa-youtube {
-  background: #c4302b;
-}
-.fa-pinterest{
-  background-color: maroon;
-}
-.fa-twitter {
-  background: #00acee;
-}
-
-.fa-facebook {
-  background: #3b5998;
-}
-
-.fa-linkedin {
-  background: #0077b5;
 }
 
 .social p {
@@ -587,7 +672,7 @@ ul {
   padding-left: 0;
 }
 footer {
-  background-color: #555;
+  background-color: #10182f;
   color: #bbb;
   line-height: 1.5;
 }
