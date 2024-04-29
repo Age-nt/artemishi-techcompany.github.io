@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Add icon library -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images/art.png">
@@ -39,47 +40,156 @@
 <br>
 
 </header>
-<!-- Nav Bar -->
-<body>
+<header id="nav-menu" aria-label="navigation bar">
+  <div class="container">
+    <div class="nav-start">
+      <a class="logo" href="/">
+        <img src="https://github.com/Evavic44/responsive-navbar-with-dropdown/blob/main/assets/images/logo.png?raw=true" width="35" height="35" alt="Inc Logo" />
+      </a>
+      <nav class="menu">
+        <ul class="menu-bar">
+          <li>
+            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true" aria-expanded="false" aria-label="browse">
+              Browse
+              <i class="bx bx-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="dropdown1" class="dropdown">
+              <ul role="menu">
+                <li role="menuitem">
+                  <a class="dropdown-link" href="#best-of-the-day">
+                    <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/botd.svg" class="icon" />
+                    <div>
+                      <span class="dropdown-link-title">Terms of use</span>
+                    </div>
+                  </a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="Chatbot.html">
+                    <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/fs.svg" class="icon" />
+                    <div>
+                      <span class="dropdown-link-title">Virtual Assistant</span>
+                    </div>
+                  </a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="https://www.pdpo.go.ug">
+                    <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/sp.svg" class="icon" />
+                    <div>
+                      <span class="dropdown-link-title">Personal Data Protection Office</span>
+                      
+                    </div>
+                  </a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="https://ict.go.ug">
+                    <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/cf.svg" class="icon" />
+                    <div>
+                      <span class="dropdown-link-title">Ministry of ICT Uganda</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
 
-   
-    <div class="navbar">
-        <!--side vav-->
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Terms of Use</a>
-        <a href="Chatbot.html">Chatbot</a>
-        <a href="#">Cookie Use Notice</a>
-        <a href="https://www.pdpo.go.ug">Personal Data Protection Office</a>
-        <a href="https://gou.go.ug">GOU.GO.UG</a>
-        <a href="https://ict.go.ug">Ministry of ICT Uganda</a>
-        <a href="#">Donate</a>
-      </div>
-
-      <i class="fab fa-sistrix"></i>
-      
-      <div id="main">
-        <button style="float: left;" class="openbtn" onclick="openNav()">&#9776; </button>
-      </div>
-       
-        <a href="index.html"><i class="fa fa-home"> Home</i></a>
-        <a href="about.html"><i class="fas fa-clock" ></i>About Us</a>
-
-        <div class="subnav">
-            <button class="subnavbtn" onclick="myFunction()">Services <i class="fa fa-angle-down"></i></button>
-            <div class="subnav-content">
-                <a href="online courses.html">Online Courses</a>
-                <a href="internships.html">Internship</a>
+              <ul role="menu">
+                <li class="dropdown-title">
+                  <span class="dropdown-link-title">Browse by apps</span>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="https://www.bing.com/ck/a?!&&p=b60c8f90ce6941daJmltdHM9MTcxNDI2MjQwMCZpZ3VpZD0xNGFhZDFlYi04NjFkLTZmZGEtMzNlNC1jNTgxODdiMTZlZGQmaW5zaWQ9NTIxNg&ptn=3&ver=2&hsh=3&fclid=14aad1eb-861d-6fda-33e4-c58187b16edd&psq=adobe+xd&u=a1aHR0cHM6Ly9oZWxweC5hZG9iZS5jb20veGQvZ2V0LXN0YXJ0ZWQuaHRtbA&ntb=1">
+                    <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/xd.svg" />
+                    Adobe XD
+                  </a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="https://www.bing.com/ck/a?!&&p=eb7dceec24fc9685JmltdHM9MTcxNDI2MjQwMCZpZ3VpZD0xNGFhZDFlYi04NjFkLTZmZGEtMzNlNC1jNTgxODdiMTZlZGQmaW5zaWQ9NTIwNA&ptn=3&ver=2&hsh=3&fclid=14aad1eb-861d-6fda-33e4-c58187b16edd&psq=after+effects&u=a1aHR0cHM6Ly93d3cuYWRvYmUuY29tL3Byb2R1Y3RzL2FmdGVyZWZmZWN0cy5odG1s&ntb=1">
+                    <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/ae.svg" />
+                    After Effect
+                  </a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="https://www.bing.com/ck/a?!&&p=d5570efba19a1ae3JmltdHM9MTcxNDI2MjQwMCZpZ3VpZD0xNGFhZDFlYi04NjFkLTZmZGEtMzNlNC1jNTgxODdiMTZlZGQmaW5zaWQ9NTIwNA&ptn=3&ver=2&hsh=3&fclid=14aad1eb-861d-6fda-33e4-c58187b16edd&psq=sketch&u=a1aHR0cHM6Ly93d3cuc2tldGNoLmNvbS8&ntb=1">
+                    <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/sketch.svg" />
+                    Sketch
+                  </a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="https://www.bing.com/search?q=adobe+indesign&filters=dtbk:%22MCFvdmVydmlldyFvdmVydmlldyFjZTcyOGZmYi04OGMyLWU0ZTktOGI3OS00MmZhNmE2OWQyNzE%3d%22+sid:%22ce728ffb-88c2-e4e9-8b79-42fa6a69d271%22+tphint:%22f%22&FORM=DEPNAV">
+                    <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/indesign.svg" />
+                    Indesign
+                  </a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="https://www.bing.com/ck/a?!&&p=dba9fc9cd6b2d1b2JmltdHM9MTcxNDI2MjQwMCZpZ3VpZD0xNGFhZDFlYi04NjFkLTZmZGEtMzNlNC1jNTgxODdiMTZlZGQmaW5zaWQ9NTIxMg&ptn=3&ver=2&hsh=3&fclid=14aad1eb-861d-6fda-33e4-c58187b16edd&psq=figma&u=a1aHR0cHM6Ly93d3cuZmlnbWEuY29tLw&ntb=1">
+                    <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/figma.svg" />
+                    Figma
+                  </a>
+                </li>
+              </ul>
             </div>
-        </div>
-        <a href="myself.html"><i class="fa fa-address-card-o"> Portfolio</i></a>
-    
-        
-        <a href="contact.html"><i class="fa fa-address-book-o"></i> Contact Us</a>
+          </li>
+          <li>
+            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+              Services
+              <i class="bx bx-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="dropdown2" class="dropdown">
+              <ul role="menu">
+                <li>
+                  <span class="dropdown-link-title">Our Services</span>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="online courses.html">Online Courses</a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="internships.html">Internships</a>
+                </li>
+              </ul>
+              <ul role="menu">
+                <li>
+                  <span class="dropdown-link-title">Download Your Apps </span>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="https://apps.miscrosoft.com/home">Windows</a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="https://www.bing.com/ck/a?!&&p=7854e1a1bf15a409JmltdHM9MTcxNDI2MjQwMCZpZ3VpZD0xNGFhZDFlYi04NjFkLTZmZGEtMzNlNC1jNTgxODdiMTZlZGQmaW5zaWQ9NTI2Ng&ptn=3&ver=2&hsh=3&fclid=14aad1eb-861d-6fda-33e4-c58187b16edd&psq=macos+apps+download&u=a1aHR0cHM6Ly9zdXBwb3J0LmFwcGxlLmNvbS9lbi11cy8xMTExMDU&ntb=1">Windows</a>
+                </li>
+                <li role="menuitem">
+                  <a class="dropdown-link" href="https://www.bing.com/ck/a?!&&p=c7d5d94d8c73fc77JmltdHM9MTcxNDI2MjQwMCZpZ3VpZD0xNGFhZDFlYi04NjFkLTZmZGEtMzNlNC1jNTgxODdiMTZlZGQmaW5zaWQ9NTIwNQ&ptn=3&ver=2&hsh=3&fclid=14aad1eb-861d-6fda-33e4-c58187b16edd&psq=linux+apps+download&u=a1aHR0cHM6Ly9mbGF0aHViLm9yZy8&ntb=1">Linux</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About Us</a></li>
+          <li><a class="nav-link" href="myself.html">Portfolio</a></li>
+          <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
     </div>
-    <br>
 
-    <button style="float: left;" onclick="myFunction()">Theme</button>
+    <div class="nav-end">
+      <div class="right-container">
+        <form class="search" role="search">
+          <input type="search" name="search" placeholder="Search" />
+          <i class="bx bx-search" aria-hidden="true"></i>
+        </form>
+        <a href="#profile">
+          <img src="https://avatars.githubusercontent.com/u/152686560?s=96&v=4" width="30" height="30" alt="user image" />
+        </a>
+        <button class="btn btn-primary">Create Accoutn</button>
+      </div>
+
+      <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
+        <i class="bx bx-menu" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</header>
+  
+<!--change theme-->
+<button style="float: left;" onclick="myFunction()">Theme</button>
+
 
 <br><br><br>
 <!--popup forms -->
@@ -408,112 +518,70 @@
   </div>
 </main>
 
-
-<!--footer-->
+<div class="container"></div>
 <footer>
-<h1>In Partnership</h1>
-<div class="pattern">
-    <br><a href="https://molg.go.ug">
-    <figure class="fig">
-        <img src="images/molg.png" style="width: 100%;">
-        <figcaption>Local Government</figcaption>
-    </figure></a>
-
-    <div class="pattern">
-    <br><a href="https://www.bou.org.ug">
-    <figure class="fig">
-        <img src="images/Bank-of-Uganda-1(1).jpg" style="width: 100%;">
-        <figcaption>Bank of Uganda</figcaption>
-    </figure></a></div>
-    
-    <div class="pattern">
-    <br><a href="https://ura.go.ug">
-    <figure class="fig">
-        <img src="images/f.png" style="width: 100%;">
-        <figcaption>Uganda Revenue Authority</figcaption>
-    </figure></a></div>
-
-    <div class="pattern">
-    <br><a href="https://www.kcca.go.ug">
-    <figure class="fig">
-        <img src="images/e.png" style="width: 100%;">
-        <figcaption>Kampala Capital City Authority</figcaption>
-    </figure></a></div>
-
-    <div class="pattern">
-    <br><a href="https://mmu.ac.ug/">
-    <figure class="fig">
-        <img src="images/d9af86a73a96a7c032cc54d2624aced7.jpg" style="width: 100%;">
-        <figcaption>Mountains of the Moon University</figcaption>
-    </figure class="fig"></a></div>
-
-    <div class="pattern">
-    <br><a href="https://www.aripo.org">
-    <figure class="fig">
-        <img src="images/h.png" style="width: 100%;">
-        <figcaption>ARIPO</figcaption>
-    </figure></a></div>
-
-    <div class="pattern">
-    <br><a href="https://cmauganda.co.ug">
-    <figure class="fig">
-        <img src="images/cma.jpeg" style="width: 100%;">
-        <figcaption>Capital Markets Authority</figcaption>
-    </figure></a></div>
-</div>
-<br><br>
-
-<hr style="background-color: blue; padding: 1px; width: 98%;">
-
-<div class="info">
-    <h2>Contact info</h2>
-    
-    <p><i class="fa fa-home">Artemis -Uganda, Reinah courts, plot A,</i></p>
-    <p><i class="fa fa-fax"></i> P.O.Box 20002, Kampala Uganda</p>
-    <p><i class="fa fa-phone" ></i><a style="text-decoration: none;" href="tel: 0740125805"> (+256)740125805</a></p>
-    <p><i class="fa fa-map" ></i><a style="text-decoration: none;" href="about.html">  Map location</a></p>
-    <p><a href="index.html"> <i class="fa fa-envelope"></i>   info@artemis.co.ug</a></p>
-    <div>
-        <a href="#">
-           <i class="fa fa-facebook"></i>
-        </a>
-        <a href="#">
-           <i class="fa fa-instagram"></i>
-        </a> <a href="#">
-       <i class="fa fa-twitter"></i>
-        </a> <a href="#">
-           <i class="fa fa-pinterest"></i>
-        </a>
-        <a href="#">
-           <i class="fa fa-linkedin"></i>
-        </a>
-        <a href="">
-            <i class="fa fa-github"></i>
-        </a>
+  <!-- Footer main -->
+  <section class="ft-main">
+    <div class="ft-main-item">
+      <h2 class="ft-title">About</h2>
+      
+      <p><i class="fa fa-home">Artemis, Ruhandika Street</i></p>
+      <p><i class="fa fa-fax"></i>P.O Box 20002, Fort Portal Uganda</p>
+      <p><i class="fa fa-map" ></i><a style="text-decoration: none;" href="about.html"> sites Map</a></p>
+      <p><a href="index.html"> <i class="fa fa-envelope"></i> artemishi-techcompany@gmail.com</a></p>
+     
     </div>
-</div>
-<div class="use">
-    <h2>Useful links</h2>
-    
-    <li><a style="text-decoration: none;" href="https://ict.go.ug">Ministry of ICT Uganda</a>
-    <li><a style="text-decoration: none;" href="https://www.ucc.co.ug">Uganda Communication Commision</a>
-    <li><a style="text-decoration: none;" href="https://www.eposta.ug">Posta Uganda</a>
-    <li><a style="text-decoration: none;" href="https://nita.go.ug/uganda-national-computer-emergency-response-team-coordination-center-certugcc">National Computer Emergency Response Team</a>
-    <li><a style="text-decoration: none;" href="https://www.statehouseinvest.go.ug">Investors Protection</a>
-    <li><a style="text-decoration: none;" href="https://mmu.ac.ug/">Mountains of the moon University</a>
-</div>
-<div class="help">
-<h2>Artemis Service Desk</h2>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Resources</h2>
+      <ul>
+      <li><a  href="https://ict.go.ug" >Ministry of ICT Uganda</a>
+        <li><a  href="https://www.ucc.co.ug">Uganda Communication Commision</a>
+        <li><a  href="https://www.eposta.ug">Posta Uganda</a>
+        <li><a  href="https://nita.go.ug/uganda-national-computer-emergency-response-team-coordination-center-certugcc">National Computer Emergency Response Team</a>
+        <li><a  href="https://www.statehouseinvest.go.ug">Investors Protection</a>
+        <li><a  href="https://mmu.ac.ug/">Mountains of the moon University</a>
+        </ul>
+        
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Contact</h2>
+      <ul class="links">
+        <li><a  href="tel:0782834582"><i class="fa fa-phone"></i> (+256)740125805</a></li>
+        <li><a  href="tel:0774273572"><i class="fa fa-phone"></i> (+256)774273572</a></li>
+        <li><a  href="tel:0774473707"><i class="fa fa-phone"></i> (+256)774473707</a></li>
+        <li><a href=mailto:walternyaika82@gmail.com><i class="fa fa-envelope"></i>   servicedesk@artemis.co.ug</a></li>
+      </ul>
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Stay Updated</h2>
+      <p>Subscribe to our newsletter to get our latest news.</p>
+      <form>
+        <input type="email" name="email" placeholder="Enter email address">
+        <input type="submit" value="Subscribe">
+      </form>
+    </div>
+  </section>
 
-<li><a style="text-decoration: none;" href="tel:0782834582"><i class="fa fa-phone"></i> (+256)740125805</a></li>
-<li><a style="text-decoration: none;" href="tel:0774273572"><i class="fa fa-phone"></i> (+256)774273572</a></li>
-<li><a style="text-decoration: none;" href="tel:0774473707"><i class="fa fa-phone"></i> (+256)774473707</a></li>
-<li><a href=mailto:walternyaika82@gmail.com><i class="fa fa-envelope"></i>   servicedesk@artemis.co.ug</a></li>
-</div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div>
-   <a href="#top"><img src="images/top.jpg" style="max-width: 50px; position: relative;"></a> 
-    &copy; Artemis Hi-Tech 2024. All Rights Reserved.
+  <!-- Footer social -->
+  <section class="ft-social">
+    <ul class="ft-social-list">
+      <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-github"></i></a></li>
+      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+  </section>
+
+  <!-- Footer legal -->
+  <section class="ft-legal">
+    <ul class="ft-legal-list">
+      <li><a href="#">Terms &amp; Conditions</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li>&copy; 2024 Copyright Artemis HI-Tech Inc.</li>
+    </ul>
+  </section>
 </footer>
 <!--java-script-->
 <script src="script.js"></script>
